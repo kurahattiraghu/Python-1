@@ -1,0 +1,53 @@
+                                      PYTHON PROGRAMMING
+									  
+What is python?
+---------------
+* It i very easy programing language.
+* it is highly recommanded language.
+* It is high level programming language.
+* It is a general purpose.
+* It is developed by 'Guido Van  Rossum' in 1989 Netherland.
+* It is official DOB 19991 Feb 20th.
+* Python programs done in python IDE.
+   Ex: >>>print('Hello world')
+        Hello world
+		
+		>>>a,b=10,20
+		>>>print(a+b)
+		30
+* C,Java is a statically typed programming.
+* Python is Dynamically typed programming.	
+* >>>a,b,c,d=10,20,30,40
+  >>>a=10
+  >>>type(a)
+  <class 'int'>
+  >>>a=true
+  type(a)
+  <class 'bool'>
+  
+* Hadoop is ayellow cop elephant sytmbol.
+* Python uses Symbol '>>>'.
+* Python came because of in TV shows "Monty Python's Flying circus' in 1969-1974.
+
+
+
+Where we can use Python?
+------------------------
+
+* Desktop Application.
+* Web Application is DJango.
+* Database Application.
+* Far Networking Application.
+* Games.
+* Data Analysis.
+* Machine Leartning Application.
+* AI- Artificial Intelligence.
+* For IOT Application. 
+
+Which companies?
+----------------
+
+* Google
+* Youtube
+* Dropbox
+* NASA

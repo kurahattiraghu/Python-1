@@ -1,0 +1,247 @@
+Data Types
+----------
+
+Data Type represent the type of data present inside a variable.
+In Python we are not required to specify the type explicitly. Based on value provided,the
+type will be assigned automatically.Hence Python is Dynamically Typed Language.
+Python contains the following inbuilt data types
+1. int
+2. float
+3.complex
+4.bool
+5.str
+6.bytes
+7.bytearray
+8.range
+9.list
+10.tuple
+11.set
+12.frozenset
+13.dict
+14.None
+Note: Python contains several inbuilt functions
+1.type()
+to check the type of variable
+2. id()
+to get address of object
+
+3. print()
+to print the value
+In Python everything is object
+int data type:
+We can use int data type to represent whole numbers (integral values)
+Eg:
+a=10
+type(a) #int
+Note:
+In Python2 we have long data type to represent very large integral values.
+But in Python3 there is no long type explicitly and we can represent long values also by
+using int type only.
+We can represent int values in the following ways
+1. Decimal form
+2. Binary form
+3. Octal form
+4. Hexa decimal form
+1. Decimal form(base-10):
+It is the default number system in Python
+The allowed digits are: 0 to 9
+Eg: a =10
+2. Binary form(Base-2):
+The allowed digits are : 0 & 1
+Literal value should be prefixed with 0b or 0B
+Eg: a = 0B1111
+a =0B123
+a=b111
+3. Octal Form(Base-8):
+The allowed digits are : 0 to 7
+Literal value should be prefixed with 0o or 0O.
+Eg: a=0o123
+a=0o786
+4. Hexa Decimal Form(Base-16):
+The allowed digits are : 0 to 9, a-f (both lower and upper cases are allowed)
+Literal value should be prefixed with 0x or 0X
+Eg:
+a =0XFACE
+a=0XBeef
+a =0XBeer
+Note: Being a programmer we can specify literal values in decimal, binary, octal and hexa
+decimal forms. But PVM will always provide values only in decimal form.
+a=10
+b=0o10
+c=0X10
+d=0B10
+print(a)10
+print(b)8
+print(c)16
+print(d)2
+Base Conversions
+Python provide the following in-built functions for base conversions
+1.bin():
+We can use bin() to convert from any base to binary
+Eg:
+1) >>> bin(15)
+2) '0b1111'
+3) >>> bin(0o11)
+4) '0b1001'
+5) >>> bin(0X10)
+6) '0b10000'
+2. oct():
+We can use oct() to convert from any base to octal
+Eg:
+1) >>> oct(10)
+2) '0o12'
+3) >>> oct(0B1111)
+4) '0o17'
+5) >>> oct(0X123)
+6) '0o443'
+3. hex():
+We can use hex() to convert from any base to hexa decimal
+Eg:
+1) >>> hex(100)
+2) '0x64'
+3) >>> hex(0B111111)
+4) '0x3f'
+5) >>> hex(0o12345)
+6) '0x14e5'
+float data type:
+We can use float data type to represent floating point values (decimal values)
+Eg: f=1.234
+type(f) float
+We can also represent floating point values by using exponential form (scientific notation)
+Eg: f=1.2e3
+print(f) 1200.0
+instead of 'e' we can use 'E'
+The main advantage of exponential form is we can represent big values in less memory.
+***Note:
+We can represent int values in decimal, binary, octal and hexa decimal forms. But we can
+represent float values only by using decimal form.
+Eg:
+1) >>> f=0B11.01
+2) File "<stdin>", line 1
+3) f=0B11.01
+4) ^
+5) SyntaxError: invalid syntax
+6)
+7) >>> f=0o123.456
+8) SyntaxError: invalid syntax
+9)
+10) >>> f=0X123.456
+11) SyntaxError: invalid syntax
+Complex Data Type:
+A complex number is of the form
+a and b contain intergers or floating point values
+Eg:
+3+5j
+10+5.5j
+0.5+0.1j
+In the real part if we use int value then we can specify that either by decimal,octal,binary
+or hexa decimal form.
+But imaginary part should be specified only by using decimal form.
+1) >>> a=0B11+5j
+2) >>> a
+3) (3+5j)
+4) >>> a=3+0B11j
+5) SyntaxError: invalid syntax
+Even we can perform operations on complex type values.
+1) >>> a=10+1.5j
+2) >>> b=20+2.5j
+3) >>> c=a+b
+4) >>> print(c)
+5) (30+4j)
+6) >>> type(c)
+7) <class 'complex'>
+a + bj
+Real Part Imaginary Part
+j2 = -1
+j =root -1
+Note: Complex data type has some inbuilt attributes to retrieve the real part and
+imaginary part
+c=10.5+3.6j
+c.real==>10.5
+c.imag==>3.6
+We can use complex type generally in scientific Applications and electrical engineering
+Applications.
+4.bool data type:
+We can use this data type to represent boolean values.
+The only allowed values for this data type are:
+True and False
+Internally Python represents True as 1 and False as 0
+b=True
+type(b) =>bool
+Eg:
+a=10
+b=20
+c=a<b
+print(c)==>True
+True+True==>2
+True-False==>1
+str type:
+str represents String data type.
+A String is a sequence of characters enclosed within single quotes or double quotes.
+s1='durga'
+s1="durga"
+By using single quotes or double quotes we cannot represent multi line string literals.
+s1="durga
+soft"
+For this requirement we should go for triple single quotes(''') or triple double quotes(""")
+s1='''durga
+soft'''
+s1="""durga
+soft"""
+We can also use triple quotes to use single quote or double quote in our String.
+''' This is " character'''
+' This i " Character '
+We can embed one string in another string
+'''This "Python class very helpful" for java students'''
+Slicing of Strings:
+slice means a piece
+[ ] operator is called slice operator,which can be used to retrieve parts of String.
+In Python Strings follows zero based index.
+The index can be either +ve or -ve.
++ve index means forward direction from Left to Right
+-ve index means backward direction from Right to Left
+1) >>> s="durga"
+2) >>> s[0]
+3) 'd'
+4) >>> s[1]
+5) 'u'
+6) >>> s[-1]
+7) 'a'
+8) >>> s[40]
+IndexError: string index out of range
+d u r g a
+0 1 2 3 4
+-5 -4 -3 -2 -1
+1) >>> s[1:40]
+2) 'urga'
+3) >>> s[1:]
+4) 'urga'
+5) >>> s[:4]
+6) 'durg'
+7) >>> s[:]
+8) 'durga'
+9) >>>
+10)
+11)
+12) >>> s*3
+13) 'durgadurgadurga'
+14)
+15) >>> len(s)
+16) 5
+Note:
+1. In Python the following data types are considered as Fundamental Data types
+ int
+ float
+ complex
+ bool
+ str
+2. In Python,we can represent char values also by using str type and explicitly char type is
+not available.
+Eg:
+1) >>> c='a'
+2) >>> type(c)
+3) <class 'str'>
+3. long Data Type is available in Python2 but not in Python3. In Python3 long values also
+we can represent by using int type only.
+4. In Python we can present char Value also by using str Type and explicitly char Type is
+not available.

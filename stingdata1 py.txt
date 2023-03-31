@@ -1,0 +1,223 @@
+Removing spaces from the string:
+
+We can use the following 3 methods
+1. rstrip()===>To remove spaces at right hand side
+2. lstrip()===>To remove spaces at left hand side
+3. strip() ==>To remove spaces both sides
+
+Eg:
+1) city=input("Enter your city Name:")
+2) scity=city.strip()
+3) if scity=='Hyderabad':
+4) print("Hello Hyderbadi..Adab")
+5) elif scity=='Chennai':
+6) print("Hello Madrasi...Vanakkam")
+7) elif scity=="Bangalore":
+8) print("Hello Kannadiga...Shubhodaya")
+9) else:
+10) print("your entered city is invalid")
+
+Finding Substrings:
+We can use the following 4 methods
+For forward direction:
+find()
+index()
+
+For backward direction:
+rfind()
+rindex()
+
+1. find():
+s.find(substring)
+Returns index of first occurrence of the given substring. If it is not available then we will get -1
+Eg:
+1) s="Learning Python is very easy
+2) print(s.find("Python")) #9
+3) print(s.find("Java")) # -1
+4) print(s.find("r"))#3
+5) print(s.rfind("r"))#21
+
+Note: By default find() method can search total string. We can also specify the boundaries to
+search.
+
+s.find(substring,bEgin,end)
+It will always search from bEgin index to end-1 index
+Eg:
+1) s="durgaravipavanshiva"
+2) print(s.find('a'))#4
+3) print(s.find('a',7,15))#10
+4) print(s.find('z',7,15))#-1
+
+index() method:
+index() method is exactly same as find() method except that if the specified substring is not
+available then we will get ValueError.
+Eg:
+1) s=input("Enter main string:")
+2) subs=input("Enter sub string:")
+3) try:
+4) n=s.index(subs)
+5) except ValueError:
+6) print("substring not found")
+7) else:
+8) print("substring found")
+
+Output:
+D:\python_classes>py test.py
+Enter main string:learning python is very easy
+Enter sub string:python
+substring found
+D:\python_classes>py test.py
+Enter main string:learning python is very easy
+Enter sub string:java
+substring not found
+
+Q. Program to display all positions of substring in a given main string
+1) s=input("Enter main string:")
+2) subs=input("Enter sub string:")
+3) flag=False
+4) pos=-1
+5) n=len(s)
+6) while True:
+7) pos=s.find(subs,pos+1,n)
+8) if pos==-1:
+9) break
+10) print("Found at position",pos)
+11) flag=True
+12) if flag==False:
+13) print("Not Found")
+Output:
+D:\python_classes>py test.py
+Enter main string:abbababababacdefg
+Enter sub string:a
+Found at position 0
+Found at position 3
+Found at position 5
+Found at position 7
+Found at position 9
+Found at position 11
+D:\python_classes>py test.py
+Enter main string:abbababababacdefg
+Enter sub string:bb
+Found at position 1
+
+Counting substring in the given String:
+We can find the number of occurrences of substring present in the given string by using count()
+method.
+1. s.count(substring) ==> It will search through out the string
+2. s.count(substring, bEgin, end) ===> It will search from bEgin index to end-1 index
+Eg:
+1) s="abcabcabcabcadda"
+2) print(s.count('a'))
+3) print(s.count('ab'))
+4) print(s.count('a',3,7))
+
+Output:
+6
+4
+2
+
+Replacing a string with another string:
+s.replace(oldstring,newstring)
+inside s, every occurrence of oldstring will be replaced with newstring.
+
+Eg1:
+s="Learning Python is very difficult"
+s1=s.replace("difficult","easy")
+print(s1)
+Output:
+Learning Python is very easy
+Eg2: All occurrences will be replaced
+s="ababababababab"
+s1=s.replace("a","b")
+print(s1)
+Output: bbbbbbbbbbbbbb
+
+Q. String objects are immutable then how we can change the content by
+using replace() method.
+Once we creates string object, we cannot change the content.This non changeable behaviour is
+nothing but immutability. If we are trying to change the content by using any method, then with
+those changes a new object will be created and changes won't be happend in existing object.
+Hence with replace() method also a new object got created but existing object won't be changed.
+Eg:
+s="abab"
+s1=s.replace("a","b")
+print(s,"is available at :",id(s))
+print(s1,"is available at :",id(s1))
+Output:
+abab is available at : 4568672
+bbbb is available at : 4568704
+
+Splitting of Strings:
+---------------------
+We can split the given string according to specified seperator by using split() method.
+l=s.split(seperator)
+The default seperator is space. The return type of split() method is List
+Eg1:
+1) s="durga software solutions"
+2) l=s.split()
+3) for x in l:
+4) print(x)
+Output:
+durga
+software
+solutions
+Eg2:
+1) s="22-02-2018"
+2) l=s.split('-')
+3) for x in l:
+4) print(x)
+Output:
+22
+02
+2018
+
+Joining of Strings:
+We can join a group of strings(list or tuple) wrt the given seperator.
+s=seperator.join(group of strings)
+Eg:
+t=('sunny','bunny','chinny')
+s='-'.join(t)
+print(s)
+Output: sunny-bunny-chinny
+
+Eg2:
+l=['hyderabad','singapore','london','dubai']
+s=':'.join(l)
+print(s)
+hyderabad:singapore:london:dubai
+
+Changing case of a String:
+We can change case of a string by using the following 4 methods.
+1. upper()===>To convert all characters to upper case
+2. lower() ===>To convert all characters to lower case
+3. swapcase()===>converts all lower case characters to upper case and all upper case characters to
+lower case
+4. title() ===>To convert all character to title case. i.e first character in every word should be upper
+case and all remaining characters should be in lower case.
+5. capitalize() ==>Only first character will be converted to upper case and all remaining characters
+can be converted to lower case
+
+Eg:
+s='learning Python is very Easy'
+print(s.upper())
+print(s.lower())
+print(s.swapcase())
+print(s.title())
+print(s.capitalize())
+Output:
+LEARNING PYTHON IS VERY EASY
+learning python is very easy
+LEARNING pYTHON IS VERY eASY
+Learning Python Is Very Easy
+Learning python is very easy
+
+Checking starting and ending part of the string:
+Python contains the following methods for this purpose
+1. s.startswith(substring)
+2. s.endswith(substring)
+
+Eg:
+s='learning Python is very easy'
+print(s.startswith('learning'))
+print(s.endswith('learning'))
+print(s.endswith('easy'))

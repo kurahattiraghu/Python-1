@@ -1,0 +1,118 @@
+Output Statements:
+------------------
+We can use print() function to display output.
+
+Form-1: print() without any argument
+Just it prints new line character
+
+Form-2:
+1) print(String):
+2) print("Hello World")
+3) We can use escape characters also
+4) print("Hello \n World")
+5) print("Hello\tWorld")
+6) We can use repetetion operator (*) in the string
+7) print(10*"Hello")
+8) print("Hello"*10)
+9) We can use + operator also
+10) print("Hello"+"World")
+
+Note:
+If both arguments are String type then + operator acts as concatenation operator.
+If one argument is string type and second is any other type like int then we will get Error
+If both arguments are number type then + operator acts as arithmetic addition operator.
+
+Note:
+1) print("Hello"+"World")
+2) print("Hello","World")
+3)
+4) HelloWorld
+5) Hello World
+Form-3: print() with variable number of arguments:
+1. a,b,c=10,20,30
+2. print("The Values are :",a,b,c)
+3.
+4. OutputThe Values are : 10 20 30
+By default output values are seperated by space.If we want we can specify seperator by
+using "sep" attribute
+1. a,b,c=10,20,30
+2. print(a,b,c,sep=',')
+3. print(a,b,c,sep=':')
+4.
+5. D:\Python_classes>py test.py
+6. 10,20,30
+7. 10:20:30
+
+Form-4:print() with end attribute:
+1. print("Hello")
+2. print("Durga")
+3. print("Soft")
+Output:
+1. Hello
+2. Durga
+3. Soft
+If we want output in the same line with space
+1. print("Hello",end=' ')
+2. print("Durga",end=' ')
+3. print("Soft")
+Output: Hello Durga Soft
+
+Note: The default value for end attribute is \n,which is nothing but new line character.
+
+Form-5: print(object) statement:
+We can pass any object (like list,tuple,set etc)as argument to the print() statement.
+Eg:
+1. l=[10,20,30,40]
+2. t=(10,20,30,40)
+3. print(l)
+4. print(t)
+
+Form-6: print(String,variable list):
+We can use print() statement with String and any number of arguments.
+Eg:
+1. s="Durga"
+2. a=48
+3. s1="java"
+4. s2="Python"
+5. print("Hello",s,"Your Age is",a)
+6. print("You are teaching",s1,"and",s2)
+Output:
+1) Hello Durga Your Age is 48
+2) You are teaching java and Python
+Form-7: print(formatted string):
+%i====>int
+%d====>int
+%f=====>float
+%s======>String type
+
+Syntax:
+print("formatted string" %(variable list))
+Eg 1:
+1) a=10
+2) b=20
+3) c=30
+4) print("a value is %i" %a)
+5) print("b value is %d and c value is %d" %(b,c))
+6)
+7) Output
+8) a value is 10
+9) b value is 20 and c value is 30
+Eg 2:
+1) s="Durga"
+2) list=[10,20,30,40]
+3) print("Hello %s ...The List of Items are %s" %(s,list))
+4)
+5) Output Hello Durga ...The List of Items are [10, 20, 30, 40]
+
+Form-8: print() with replacement operator {}
+Eg:
+1) name="Durga"
+2) salary=10000
+3) gf="Sunny"
+4) print("Hello {0} your salary is {1} and Your Friend {2} is waiting".format(name,salary,gf))
+5) print("Hello {x} your salary is {y} and Your Friend {z} is waiting".format(x=name,y=salary,z=
+gf))
+6)
+7) Output
+8) Hello Durga your salary is 10000 and Your Friend Sunny is waiting
+9) Hello Durga your salary is 10000 and Your Friend Sunny is waiting.
